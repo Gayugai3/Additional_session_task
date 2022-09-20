@@ -1,0 +1,11 @@
+function range(start, end) //function defination with 2 parameters
+{		
+  var arr = [];		// empty array
+  for (var i = start; i <= end; i++) //loop to interate from starting to ending range 
+  {
+    arr.push(i);		// This will add the elements to array
+  }	
+  return arr;			// returns the array
+}
+console.log(range(3,7)); //1st function call which satisfies the No.1 condition
+console.log(range(-4,7)); //2nd function call which satisfies the No.2 condition

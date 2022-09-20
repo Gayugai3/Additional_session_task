@@ -1,0 +1,31 @@
+//function declaration
+//freq fn is used to find and return the item which occurs max number of times
+
+
+function freq(arr1)				//freq has array as parameter
+{
+for (var i=0; i<arr1.length; i++) 		//outer loop iterate through array element
+{
+        for (var j=i; j<arr1.length; j++)	// inner loop is to find the element and count the occurance 
+        {
+                if (arr1[i] == arr1[j])		//it takes a single element and matches with all the elements
+                 temp++;			//if it matches temp is incremented by 1
+                if (mf<temp)			//if max times is less than the count value
+                {
+                  mf=temp; 			//it assigns count to max value
+                  item = arr1[i];		//found the element and assign it to item
+                }
+        }
+        temp=0;					//again count is assigns to 0
+}
+return {item,mf};
+}
+
+
+var arr1=[3, 'q', 'q', 'q', 2, 3, 'q', 3, 'q', 2, 4, 9, 3];	//array
+var mf = 1;							//max freq is assign to 1
+var temp = 0;							//temp variable used to count the occuarance of item 
+var item;
+var maxf = freq(arr1);						//call for function and stores the returning values to a obj
+
+console.log(maxf.item+" ( " +maxf.mf +" times ) ") ;		//prints the returned value
